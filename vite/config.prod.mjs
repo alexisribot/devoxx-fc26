@@ -18,7 +18,7 @@ const phasermsg = () => {
 }
 
 export default defineConfig({
-    base: './',
+    base: '/devoxx-fc26/',
     plugins: [
         react(),
         phasermsg()
