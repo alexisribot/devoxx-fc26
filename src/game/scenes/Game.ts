@@ -610,10 +610,12 @@ export class Game extends Scene {
         this.goalText = this.add
             .text(CX, CY, "BUT !", {
                 fontFamily: "Arial Black",
-                fontSize: 80,
+                fontSize: 72,
                 color: "#ffff00",
                 stroke: "#000000",
-                strokeThickness: 10
+                strokeThickness: 10,
+                align: "center",
+                wordWrap: { width: 700, useAdvancedWrap: false }
             })
             .setOrigin(0.5)
             .setDepth(20)
