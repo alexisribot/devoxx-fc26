@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 const phasermsg = () => {
     return {
-        name: 'phasermsg',
+        name: "phasermsg",
         buildStart() {
             process.stdout.write(`Building for production...\n`);
         },
@@ -14,25 +14,22 @@ const phasermsg = () => {
 
             process.stdout.write(`✨ Done ✨\n`);
         }
-    }
-}
+    };
+};
 
 export default defineConfig({
-    base: '/devoxx-fc26/',
-    plugins: [
-        react(),
-        phasermsg()
-    ],
-    logLevel: 'warning',
+    base: "/devoxx-fc26/",
+    plugins: [react(), phasermsg()],
+    logLevel: "warning",
     build: {
         rollupOptions: {
             output: {
                 manualChunks: {
-                    phaser: ['phaser']
+                    phaser: ["phaser"]
                 }
             }
         },
-        minify: 'terser',
+        minify: "terser",
         terserOptions: {
             compress: {
                 passes: 2
